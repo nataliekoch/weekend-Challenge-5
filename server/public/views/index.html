@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-route/angular-route.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
@@ -10,7 +11,12 @@
 
   </head>
   <body>
-    <div ng-controller="myController"></div>
-    <h1>Loading</h1>
+    <a href="/addresses"><button class="btn btn-danger btn-lg">Addresses</button></a>
+    <a href="/orders"><button class="btn btn-danger btn-lg">Orders</button></a>
+
+    <div ng-view>
+
+    </div>
+
   </body>
 </html>

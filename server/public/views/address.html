@@ -1,0 +1,17 @@
+<div ng-controller="addressController">
+  <form name="addressForm">
+    <label for="addressSelect"> What client addresses would you like?: </label>
+    <select ng-model="selectedId" ng-change="updateAddresses(selectedId)">
+      <option ng-repeat="option in data" value="{{option.id}}">{{option.name}}</option>
+    </select>
+  </form>
+
+  <dt>Addresses:</dt>
+    <!-- <h2 ng-show="currentUser">For {{currentUser}}</h2> -->
+    <div class="address" ng-repeat="address in userAddresses track by $index">
+        <p class="type">{{address.address_type}}</p>
+        <p>{{address.address_street}}</p>
+        <p>{{address.address_city}}, {{address.address_state}} {{address.address_zip}}</p><br>
+    </div>
+  </div>
+</div>
